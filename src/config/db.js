@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const baseurl=process.env.MONGODBURL ||'0.0.0.0:27017';
+const baseurl=process.env.MONGODBURL ||'127.0.0.1:27017';
 export const connectToDB=async()=>{
     try {
         await mongoose.connect(`mongodb://${baseurl}/userservice`);
